@@ -1,0 +1,16 @@
+//TOD: Create schema
+//TODO Create model from schema
+
+const mongoose = require("mongoose");
+
+const productSchema = new mongoose.Schema({
+    name: {type:String, require: true, minlength: 2, maxlength:255},
+    description: {type:String, require: true, minlength: 2},
+    category: {type:String, require: true, minlength: 2, maxlength:255},
+    price: {type:Number, require: true},
+    dateAdded: {type:Date, default: Date.now()},   
+});
+
+const Product = mongoose.model("Product", productSchema);
+
+module.exports = Product;
