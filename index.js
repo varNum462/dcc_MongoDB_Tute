@@ -4,7 +4,7 @@ const express = require("express");
 const cors = require("cors");
 const app = express();
 
-const products = require("./routes/products")
+const products = require("./routes/products");
 
 connectDb();
 
